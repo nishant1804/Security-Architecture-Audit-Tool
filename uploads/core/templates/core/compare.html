@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p style="font-size: 20px;margin-top: 50px;" class="w3-red">{{type_name}} File Diff :</p>
+<p style="font-size: 20px;margin-left: 50px;">No such Format Found</p>
+
+{% for x,y in res %}
+  <p style="margin-left: 100px;">In Line :{{x}} ----->>  {{y}}</p>
+{% endfor %}
+
+{% endblock %}
+
+

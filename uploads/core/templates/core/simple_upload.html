@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data" style="text-align:center ;margin-top: 100px;">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit" class="w3-button w3-black">Compare</button>
+  </form>
+  <br>
+  <p style="text-align:center ;margin-top: 100px;"><a href="{% url 'home' %}">Return to home</a></p>
+{% endblock %}

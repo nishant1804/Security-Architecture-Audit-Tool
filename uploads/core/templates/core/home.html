@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+</br></br>
+</br></br>
+<li style="text-align:center; margin-right: 100px; padding-left: 100px;">
+  <a href="{% url 'simple_upload' %}">
+    <button class="w3-button w3-black" style="margin-right: 100px;">DEVELOPER </button>
+  </a>
+
+  <a href="{% url 'upload_type' %}">
+    <button class="w3-button w3-black">SECURITY</button>
+  </a>
+</li>
+
+
+{% endblock %}

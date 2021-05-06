@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data" style="text-align:center ;margin-top: 100px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="w3-button w3-black">Upload</button>
+  </form>
+  <p style="text-align:center ;margin-top: 100px;"><a href="{% url 'home' %}" >Return to home</a></p>
+{% endblock %}

@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+Django = "==1.9.8"
+deepdiff = "*"
+
+[requires]
+python_version = "3.7"

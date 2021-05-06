@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p style=" margin-left: 100px; margin-top: 50px; font-size: 20px;">
+    Your Options :
+</p>
+
+</br>
+<ul style=" margin-left: 200px;">
+    <li>
+        <form   action="{% url 'model_form_upload' %}?json" method="post">
+            {% csrf_token %}
+            <button type="submit" class="w3-button w3-black">JSON</button>
+        </form>
+    </li>
+    </br>
+    <li>
+        <form   action="{% url 'model_form_upload' %}?MangoDb_Json" method="post">
+            {% csrf_token %}
+            <button type="submit" class="w3-button w3-black">MangoDb Json</button>
+        </form>
+    </li>
+    </br>
+    <li>
+        <form   action="{% url 'model_form_upload' %}?json" method="post">
+            {% csrf_token %}
+            <button type="submit" class="w3-button w3-black">JSON T2</button>
+        </form>
+    </li>
+    </br>
+    <li>
+        <form   action="{% url 'model_form_upload' %}?yaml" method="post">
+            {% csrf_token %}
+            <button type="submit" class="w3-button w3-black">YAML</button>
+        </form>
+    </li>
+</ul>
+
+</br></br>
+
+<p style=" margin-left: 100px; margin-top: 50px; font-size: 20px;">
+    Add New Tech ==>> 
+    <a href="{% url 'add_tech' %}"><button class="w3-button w3-black">ADD</button></a>
+</p>
+
+{% endblock %}
+
